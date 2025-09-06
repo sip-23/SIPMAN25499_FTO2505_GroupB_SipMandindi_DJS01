@@ -7,3 +7,17 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar * {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #652A0E;
+  border-radius: 6px;
+}

@@ -2,11 +2,19 @@
 
 ## Overview
 
-You will design and build a responsive web application that allows users to **browse podcast shows** on a landing page and **view detailed information** in a modal. The application should display clear, concise previews of podcast shows and offer additional information through a modal pop-up, **all without navigating away from the page**. Your app should showcase clean code architecture and strong UI/UX design while following JavaScript best practices.
+### The Design
+
+You will design and build a responsive web application that allows users to **browse podcast shows** on a landing page and **view detailed information** in a modal.
+
+### Key objective and Requirements
+
+The application should display clear, concise previews of podcast shows and offer additional information through a modal pop-up, **all without navigating away from the page**.
+
+Your app should showcase clean code architecture and strong UI/UX design while following JavaScript best practices.
 
 ---
 
-## Core Objectives
+## Implemention of Core Objectives and Usecases
 
 ### 1. Landing Page – Podcast Previews
 
@@ -41,29 +49,29 @@ You will design and build a responsive web application that allows users to **br
 
 ---
 
-## Technical Requirements
+## Technical Requirements and Implementation
 
-- Use **HTML, CSS (or Tailwind), and JavaScript**.
+- I Used **HTML, Tailwind css, and  Vanilla JavaScript**.
 - No page reloads: Use JavaScript to handle modal behaviour and data rendering.
-- Ensure all UI states (modal open/close, hover effects, etc.) work smoothly.
-- Ensure all data is displayed in a **readable and accessible format**.
+- All UI states (modal open/close, hover effects, etc.) work smoothly.
+- All data is displayed in a **readable and accessible format**.
 
 ---
 
 ## Design & UX Goals
 
-- Visually appealing UI with clear layout and hierarchy.
+### Figma Design Link
+- I the used provided wireframe in the wireframe reference images folder for guidance on how to build the UI structure to implement my Prototype.
+  - ![alt text](<wireframe reference images/desktop view/desktop_modal_view.png>)
+- I designed a visually appealing UI Prototype with clear layout and hierarchy using Figma.
+  - Check updated : [Figma design Link](https://www.figma.com/design/5vvqOdJYHcn6BMR8QZ5WPA/Prototyping-in-Figma?node-id=3833-2013&t=Ym4md3F2PlKb4uD4-0)
 - Use a consistent **colour scheme, typography, spacing, and sizing**.
 - Accessibility considerations (contrast, font readability, responsive buttons).
 - App should be fully **responsive** on desktop, tablet, and mobile.
 
-Make sure to dive into the wireframe reference images folder for guidance on how to build the UI structure. Note that the UI wireframes for both Desktop and Mobile are included.  
-
-![alt text](<wireframe reference images/desktop view/desktop_modal_view.png>)
-
 ---
 
-## Deliverables
+## Deliverables Outcome
 
-- A fully functional, responsive podcast preview web application.
-- Clean, well-commented source code (HTML, CSS, JS).
+A fully functional **dynamic Podcast app** where Poscast shows appear correctly, and users can **open a modal to view** Podcast details. The project will follow **clean, well-documented, and maintainable code practices**, ensuring a professional and scalable implementation.
+
