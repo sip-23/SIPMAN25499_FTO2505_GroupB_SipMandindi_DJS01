@@ -691,14 +691,72 @@
         </section>
     </main>
 
+    <!-- The Podcast modal -->
+    <div class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" id="task-modal">
+        <div class="bg-[#121212] rounded-lg p-6 mx-3 w-[900px] h-[615px] top-[242px] left-[456px] rounded-[6px] opacity-100 transform-none overflow-x-auto">
+            <div class="modal-actions flex justify-between items-center mb-4">
+                <h2 id="pod-title" class="text-3xl font-bold  text-[#fff] px-4">Podcast Title</h2>
+                <button type="button" class="py-2 text-3xl font-extrablack text-[#EA5555] hover:text-red-900" id="cancel-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="22px" height="22px" viewBox="0 0 32 32" version="1.1">
+                    <title>cancel2</title>
+                    <path d="M19.587 16.001l6.096 6.096c0.396 0.396 0.396 1.039 0 1.435l-2.151 2.151c-0.396 0.396-1.038 0.396-1.435 0l-6.097-6.096-6.097 6.096c-0.396 0.396-1.038 0.396-1.434 0l-2.152-2.151c-0.396-0.396-0.396-1.038 0-1.435l6.097-6.096-6.097-6.097c-0.396-0.396-0.396-1.039 0-1.435l2.153-2.151c0.396-0.396 1.038-0.396 1.434 0l6.096 6.097 6.097-6.097c0.396-0.396 1.038-0.396 1.435 0l2.151 2.152c0.396 0.396 0.396 1.038 0 1.435l-6.096 6.096z"/>
+                  </svg>
+                </button>
+            </div>
+            <div id="Podcast-details" class="flex-row items-center justify-between p-4">
+                <img src="assets/SippiCup_logo.png" alt="Album" class="rounded-md mb-4 w-[250px] h-[200px]">
+                <div class="form-group mb-4 flex flex-col gap-3">
+                    <label for="description" class="block text-xl font-medium text-white mb-1">Describtion</label>
+                    <p id="pod-desc" class="text-base text-[#b3b3b3]">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit magna eget facilisis feugiat. In sem nunc, sagittis ut vulputate eget, hendrerit et lorem. 
+                      Praesent odio odio, venenatis sit amet mi in, accumsan venenatis odio. Donec pretium ipsum a mi mollis euismod. Vestibulum libero urna, fringilla ac ultricies eget, sollicitudin a dolor. 
+                      Phasellus in diam vulputate, pellentesque dui quis, dignissim augue. Etiam placerat purus et dolor vulputate, id vestibulum mauris pellentesque. Aenean vel ullamcorper quam, nec finibus nibh. 
+                      Nullam luctus et odio et laoreet. Integer vitae urna et quam facilisis consectetur. Duis vel purus tortor. Morbi consequat ultrices diam, eget congue diam viverra eget.
+                    </p>
+                    <label for="pod-genre" class="block text-xl font-medium text-white mb-1">Genres</label>
+                    <div id="genre-list"class="flex flex-wrap items-start gap-1">
+                      <button class="bg-[#F4F4F4] w-fit h-fit px-1 text-sm text-[#121212] truncate">Business</button>
+                      <button class="bg-[#F4F4F4] w-fit h-fit px-1 text-sm text-[#121212] truncate">News</button>
+                      <button class="bg-[#F4F4F4] w-fit h-fit px-1 text-sm text-[#121212] truncate">Technology</button>
+                    </div>
+                    <div class="flex items-center justify-start gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b3b3b3" width="12px" height="12px" viewBox="0 0 100.353 100.353" id="Layer_1" version="1.1" xml:space="preserve">
+                        <g>
+                          <path d="M32.286,42.441h-9.762c-0.829,0-1.5,0.671-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.829,0,1.5-0.672,1.5-1.5   v-9.762C33.786,43.113,33.115,42.441,32.286,42.441z M30.786,52.203h-6.762v-6.762h6.762V52.203z"/>
+                          <path d="M55.054,42.441h-9.762c-0.829,0-1.5,0.671-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5   v-9.762C56.554,43.113,55.882,42.441,55.054,42.441z M53.554,52.203h-6.762v-6.762h6.762V52.203z"/>
+                          <path d="M77.12,42.441h-9.762c-0.828,0-1.5,0.671-1.5,1.5v9.762c0,0.828,0.672,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5v-9.762   C78.62,43.113,77.948,42.441,77.12,42.441z M75.62,52.203h-6.762v-6.762h6.762V52.203z"/>
+                          <path d="M32.286,64.677h-9.762c-0.829,0-1.5,0.672-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.829,0,1.5-0.672,1.5-1.5   v-9.762C33.786,65.349,33.115,64.677,32.286,64.677z M30.786,74.439h-6.762v-6.762h6.762V74.439z"/>
+                          <path d="M55.054,64.677h-9.762c-0.829,0-1.5,0.672-1.5,1.5v9.762c0,0.828,0.671,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5   v-9.762C56.554,65.349,55.882,64.677,55.054,64.677z M53.554,74.439h-6.762v-6.762h6.762V74.439z"/>
+                          <path d="M77.12,64.677h-9.762c-0.828,0-1.5,0.672-1.5,1.5v9.762c0,0.828,0.672,1.5,1.5,1.5h9.762c0.828,0,1.5-0.672,1.5-1.5v-9.762   C78.62,65.349,77.948,64.677,77.12,64.677z M75.62,74.439h-6.762v-6.762h6.762V74.439z"/>
+                          <path d="M89,13.394h-9.907c-0.013,0-0.024,0.003-0.037,0.004V11.4c0-3.268-2.658-5.926-5.926-5.926s-5.926,2.659-5.926,5.926v1.994   H56.041V11.4c0-3.268-2.658-5.926-5.926-5.926s-5.926,2.659-5.926,5.926v1.994H33.025V11.4c0-3.268-2.658-5.926-5.926-5.926   s-5.926,2.659-5.926,5.926v1.995c-0.005,0-0.01-0.001-0.015-0.001h-9.905c-0.829,0-1.5,0.671-1.5,1.5V92.64   c0,0.828,0.671,1.5,1.5,1.5H89c0.828,0,1.5-0.672,1.5-1.5V14.894C90.5,14.065,89.828,13.394,89,13.394z M70.204,11.4   c0-1.614,1.312-2.926,2.926-2.926s2.926,1.312,2.926,2.926v8.277c0,1.613-1.312,2.926-2.926,2.926s-2.926-1.312-2.926-2.926V11.4z    M50.115,8.474c1.613,0,2.926,1.312,2.926,2.926v8.277c0,1.613-1.312,2.926-2.926,2.926c-1.614,0-2.926-1.312-2.926-2.926v-4.643   c0.004-0.047,0.014-0.092,0.014-0.141s-0.01-0.094-0.014-0.141V11.4C47.189,9.786,48.501,8.474,50.115,8.474z M24.173,11.4   c0-1.614,1.312-2.926,2.926-2.926c1.613,0,2.926,1.312,2.926,2.926v8.277c0,1.613-1.312,2.926-2.926,2.926   c-1.614,0-2.926-1.312-2.926-2.926V11.4z M87.5,91.14H12.753V16.394h8.405c0.005,0,0.01-0.001,0.015-0.001v3.285   c0,3.268,2.659,5.926,5.926,5.926s5.926-2.658,5.926-5.926v-3.283h11.164v3.283c0,3.268,2.659,5.926,5.926,5.926   s5.926-2.658,5.926-5.926v-3.283h11.163v3.283c0,3.268,2.658,5.926,5.926,5.926s5.926-2.658,5.926-5.926V16.39   c0.013,0,0.024,0.004,0.037,0.004H87.5V91.14z"/>
+                        </g>
+                      </svg>
+                      <span class="text-sm text-[#b3b3b3] truncate">Last updated:</span>
+                      <span id="last-updated-date" class="text-sm text-[#b3b3b3] truncate">Last updated</span>
+                    </div>
+                </div>
+                <div class="form-group relative mb-6">
+                    <label for="seasons" class="block text-xl font-medium text-[#fff] mb-4">Seasons</label>
+                    <div class="w-full px-2 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 text-gray-400 [&>option:checked]:text-black">
+                        <h4 id="pod-seasons" class="block text-l font-medium text-[#fff] p-2">Season 1: Getting started</h4>
+                        <div class="flex items-center justify-between">
+                          <span id="season-title" class="text-sm font-medium text-[#b3b3b3] p-2">Introduction to the fundementals</span>
+                          <span id="num-episodes" class="text-sm font-medium text-[#b3b3b3] p-2">12 Episodes</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
     <!-- Player Controls -->
     <footer class="bottom-0 left-0 right-0 w-full fixed bg-[#181818] h-25 flex flex-col items-center justify-between border-t border-[#333] p-4 text-[#b3b3b3] z-50">
         <!-- Progress Bar -->
         <div class="flex items-center w-full mb-4">
             <span class="w-12 text-right" id="currentTime">0:00</span>
-            <div id="progressBar" class="flex-1 mx-4 h-2 bg-[#453218] rounded cursor-pointer relative progress-bar">
-                <div id="progress" class="h-full bg-[#795C34] rounded relative" style="width: 0%">
-                    <span class="absolute w-3 h-3 bg-white rounded-full -right-1.5 top-1/2 -translate-y-1/2 opacity-0 transition-opacity progress-handle"></span>
+            <div id="progressBar" class="flex-1 mx-4 h-2 bg-[#D9D9D9] rounded cursor-pointer relative progress-bar">
+                <div id="progress" class="h-full bg-[#652A0E] rounded relative" style="width: 46%">
+                    <span class="absolute w-3 h-3 bg-[#D9D9D9] rounded-full -right-1.5 top-1/2 -translate-y-1/2 opacity-0 transition-opacity progress-handle"></span>
                 </div>
             </div>
             <span class="w-12" id="totalDuration">3:45</span>
@@ -717,7 +775,7 @@
             </div>
             
             <!-- Playback Controls -->
-            <div class="flex items-center justify-center w-[33%] space-x-3">
+            <div class="flex items-center justify-center w-[33%] space-x-2">
                 <button id="shuffleBtn" class="text-xl cursor-pointer text-[#b3b3b3] hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="22px" height="22px" viewBox="0 0 24 24" id="shuffle" data-name="Flat Line" class="icon flat-line"><path id="primary" d="M3,8H5.28a6,6,0,0,1,4.51,2.05L13.21,14A6,6,0,0,0,17.72,16H21" style="fill: none; stroke: #b3b3b3; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"/>
                       <polyline id="primary-2" data-name="primary" points="19 14 21 16 19 18" style="fill: none; stroke: #b3b3b3; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"/>
@@ -776,7 +834,7 @@
                     type="range" 
                     min="0" 
                     max="100" 
-                    value="80" 
+                    value="50" 
                     id="volumeControl"
                     class="w-24 mr-2"
                 />
