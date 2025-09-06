@@ -273,7 +273,7 @@
                   <div id="task-priority-error" class="error-message absolute z-10 hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)] bg-white"></div>
               </div>
             </div>
-            <div class="Podcast-container flex flex-col mb-4">
+            <div class="flex flex-col mb-4">
               <h1 class="text-2xl font-bold text-white mb-6">Playlist by Genre</h1>
               <div class="flex items-center mb-6">
                 <button class="p-4">
@@ -284,7 +284,7 @@
                         </g>
                     </svg>
                 </button>
-                <div class="flex items-center gap-6 w-[900px] h-[370px] px-1 py-2 overflow-y-auto">
+                <div id="podcasts-container" class="flex items-center gap-6 w-[900px] h-[370px] px-1 py-2 overflow-y-auto">
                   <!-- Music Cards -->
                   <div class="min-w-[280px] max-h-[350px] flex flex-col hover:bg-[#65350F] p-5 gap-1 rounded-lg bg-[#282828] transition-colors cursor-pointer">
                       <img src="assets/SippiCup_logo.png" alt="Album" class="rounded-md mb-4 w-[240px] h-[190px]">
@@ -692,7 +692,7 @@
     </main>
 
     <!-- The Podcast modal -->
-    <div class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" id="task-modal">
+    <div class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" id="podcast-modal">
         <div class="bg-[#121212] rounded-lg p-6 mx-3 w-[900px] h-[615px] top-[242px] left-[456px] rounded-[6px] opacity-100 transform-none overflow-x-auto">
             <div class="modal-actions flex justify-between items-center mb-4">
                 <h2 id="pod-title" class="text-3xl font-bold  text-[#fff] px-4">Podcast Title</h2>
@@ -704,7 +704,7 @@
                 </button>
             </div>
             <div id="Podcast-details" class="flex-row items-center justify-between p-4">
-                <img src="assets/SippiCup_logo.png" alt="Album" class="rounded-md mb-4 w-[250px] h-[200px]">
+                <img id="pod-image" src="assets/SippiCup_logo.png" alt="Album" class="rounded-md mb-4 w-[250px] h-[200px]">
                 <div class="form-group mb-4 flex flex-col gap-3">
                     <label for="description" class="block text-xl font-medium text-white mb-1">Describtion</label>
                     <p id="pod-desc" class="text-base text-[#b3b3b3]">
@@ -735,7 +735,7 @@
                       <span id="last-updated-date" class="text-sm text-[#b3b3b3] truncate">Last updated</span>
                     </div>
                 </div>
-                <div class="form-group relative mb-6">
+                <div id="seasons-container" class="form-group relative mb-6">
                     <label for="seasons" class="block text-xl font-medium text-[#fff] mb-4">Seasons</label>
                     <div class="w-full px-2 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 text-gray-400 [&>option:checked]:text-black">
                         <h4 id="pod-seasons" class="block text-l font-medium text-[#fff] p-2">Season 1: Getting started</h4>
@@ -871,6 +871,6 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="scripts/ui/renderCard.js"></script>
   </body>
 </html>
