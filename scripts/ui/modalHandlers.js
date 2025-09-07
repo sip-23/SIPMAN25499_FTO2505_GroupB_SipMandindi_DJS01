@@ -1,3 +1,5 @@
+
+
 import { podcasts, genres, seasons } from "../../data.js";
 
 let currentPodcast = null;
@@ -97,22 +99,46 @@ const cancelBtn = document.getElementById('cancel-btn');
 // }
 
 // 1. Find the Podcast from my data using selected Id
+
+/**
+ * Finds a podcast by its ID
+ * @param {string} id - The ID of the podcast to find
+ * @returns {Object} The podcast object if found, undefined otherwise
+ */
 function getPodcastById(id) {
     return podcasts.find(podcast => podcast.id === id);
 }
 
 // 2. Mapp the Genres using thier ids
+
+/**
+ * Gets genre names for a specific podcast
+ * @param {Object} podcast - The podcast object
+ * @returns {string[]} Array of genre names
+ */
 function getGenresByPodcast(podcast) {
     return genres.filter(genre => podcast.genres.includes(genre.id))
                  .map(genre => genre.title);
 }
 
 // 3. Mapp those Genres names to the selected Podcast
+
+/**
+ * Finds seasons for a specific podcast
+ * @param {string} id - The ID of the podcast
+ * @returns {Object} Seasons data if found, undefined otherwise
+ */
 function getSeasonsByPodcastId(id) {
     return seasons.find(season => season.id === id);
 }
 
 // 4. Format the Date
+
+/**
+ * Formats a date string to a readable format
+ * @param {string} dateString - The date string to format
+ * @returns {string} Formatted date string
+ */
 function getFormattedDate(dateString) {
     const updatedDate = new Date(dateString);
     return updatedDate.toLocaleDateString('en-US', {
@@ -123,6 +149,12 @@ function getFormattedDate(dateString) {
 }
 
 // 5. full in the text in the modal
+
+/**
+ * Updates the text content of a DOM element
+ * @param {string} id - The ID of the element to update
+ * @param {string} text - The text content to set
+ */
 function updateElementText(id, text) {
     const element = document.getElementById(id);
     if (element) element.textContent = text;
@@ -130,6 +162,14 @@ function updateElementText(id, text) {
 
 
 // 6. Adding the image in the modal
+
+/**
+ * Updates the source and alt attributes of an image element
+ * @param {string} id - The ID of the image element
+ * @param {string} src - The image source URL
+ * @param {string} alt - The alt text for the image
+ * @returns {}
+ */
 function updateImageElement(id, src, alt) {
     const element = document.getElementById(id);
     if (element) {
@@ -140,6 +180,12 @@ function updateImageElement(id, src, alt) {
 
 
 // 7. Adding the Genres in the model
+
+/**
+ * Populates the genre list in the modal with genre buttons
+ * @param {Array} genresList - Array of genre names
+ * @returns {}
+ */
 function populateGenreList(genresList) {
     const genreList = document.getElementById('genre-list');
     if (genreList) {
@@ -154,6 +200,12 @@ function populateGenreList(genresList) {
 }
 
 // 8. Adding the season-containters in the modal
+
+/**
+ * Populates the seasons list in the modal with season information
+ * @param {Object} seasonsData - Seasons data object
+ * @returns {}
+ */
 function populateSeasonList(seasonsData) {
     const seasonsContainer = document.getElementById('seasons-container');
     if (seasonsContainer) {
@@ -193,6 +245,12 @@ function closePodcastModal() {
 }
 
 // 10. Main: Opening the modal after selecting the Podcast card
+
+/**
+ * The Main function to open and populate the podcast modal
+ * @param {string} podcastId - The ID of the podcast to display
+ * @returns {}
+ */
 export function openPodcastModal(podcastId) {
     const podcast = getPodcastById(podcastId);
     if (!podcast) return;
@@ -220,6 +278,11 @@ export function closePodcastModal() {
 
 
 // Setup event listener for the modal interaction
+
+/**
+ * Sets up event listeners for the modal (close button and backdrop click)
+ * 
+ */
 function setupEventListeners() {
     // Only add event listener if cancelBtn exists
     if (cancelBtn) {

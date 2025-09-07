@@ -77,6 +77,11 @@ const podcastsContainer = document.getElementById('podcasts-container');
 // }
 
 // 1. Creating the div element for the card
+
+/**
+ * Creates a card element with styling
+ * @returns {HTMLElement} The created div element
+ */
 function createCardElement() {
     const element = document.createElement('div');
     element.className = 'min-w-[280px] max-h-[350px] flex flex-col hover:bg-[#65350F] p-5 gap-1 rounded-lg bg-[#282828] transition-colors cursor-pointer';
@@ -85,12 +90,26 @@ function createCardElement() {
 
 
 // 2. Styling the Card
+
+/**
+ * Implements additional styling to a card element
+ * @param {HTMLElement} element - The card element to style
+ * @returns {}
+ */
 function applyCardStyling(element) {
     // This could be extended if you need more complex styling logic
     element.classList.add('podcast-card');
 }
 
 // 2. Styling the Card
+
+/**
+ * Builds the HTML content for a podcast card
+ * @param {Object} podcast - The podcast object
+ * @param {Array} podcastGenres - Array of genre names
+ * @param {number} daysSinceUpdate - Number of days since last update
+ * @returns {string} HTML string for the card content
+ */
 function buildCardHTML(podcast, podcastGenres, daysSinceUpdate) {
     return `
         <img src="${podcast.image}" alt="${podcast.title}" class="rounded-md mb-4 w-[240px] h-[190px] object-cover">
@@ -129,6 +148,12 @@ function calculateDaysSinceUpdate(updatedDate) {
 } 
 
 // 5. Main: With this, I can then Then create the card using the above function:
+
+/**
+ * Creates a full podcast card element with content/information
+ * @param {Object} podcast - The podcast object
+ * @returns {HTMLElement} The complete podcast card element
+ */
 function createPodcastElement(podcast) {
     const podcastElement = createCardElement();
     applyCardStyling(podcastElement);
