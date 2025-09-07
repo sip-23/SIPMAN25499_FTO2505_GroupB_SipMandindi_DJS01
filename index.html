@@ -14,12 +14,12 @@
     <title>SippiCup</title>
   </head>
   <body>
-    <div class="h-screen flex flex-col overflow-y">
+    <div class="h-full flex flex-col overflow-y">
     <!-- Top Navigation Bar -->
-    <header class="top-0 left-0 right-0 bg-[#121212] w-full h-[70px] px-6 py-2 fixed flex items-center justify-between z-50 border-b border-[#333]">
+    <header class="top-0 left-0 right-0 bg-[#121212] w-full h-[70px] px-2 md:px-6 py-2 gap-6 fixed flex-shrink-0 flex-1 flex items-center md:justify-between z-50 border-b border-[#333]">
         <!-- Logo -->
-        <div class="flex items-center justify-around gap-3">     
-          <svg class="ml-6" xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="22" height="22" viewBox="0 0 56 56"><path d="M 40.3163 3.2969 C 33.7070 3.2969 27.3320 7.8438 27.3320 17.5234 L 27.3320 24.9063 L 7.2460 24.9063 C 4.1288 24.9063 2.6757 26.3828 2.6757 29.7344 L 2.6757 47.8750 C 2.6757 51.2266 4.1288 52.7031 7.2460 52.7031 L 30.8242 52.7031 C 33.9413 52.7031 35.3944 51.2266 35.3944 47.8750 L 35.3944 29.7344 C 35.3944 26.5000 34.0351 25.0234 31.1054 24.9297 L 31.1054 17.0313 C 31.1054 10.3750 35.4179 6.8828 40.3163 6.8828 C 45.2382 6.8828 49.5505 10.3750 49.5505 17.0313 L 49.5505 22.4219 C 49.5505 24.0860 50.3708 24.7891 51.4489 24.7891 C 52.4804 24.7891 53.3243 24.1563 53.3243 22.4922 L 53.3243 17.5234 C 53.3243 7.8438 46.9259 3.2969 40.3163 3.2969 Z"/></svg>
+        <div class="flex items-center justify-between lg:justify-around gap-3">     
+          <svg class="ml-1 md:ml-6" xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="22" height="22" viewBox="0 0 56 56"><path d="M 40.3163 3.2969 C 33.7070 3.2969 27.3320 7.8438 27.3320 17.5234 L 27.3320 24.9063 L 7.2460 24.9063 C 4.1288 24.9063 2.6757 26.3828 2.6757 29.7344 L 2.6757 47.8750 C 2.6757 51.2266 4.1288 52.7031 7.2460 52.7031 L 30.8242 52.7031 C 33.9413 52.7031 35.3944 51.2266 35.3944 47.8750 L 35.3944 29.7344 C 35.3944 26.5000 34.0351 25.0234 31.1054 24.9297 L 31.1054 17.0313 C 31.1054 10.3750 35.4179 6.8828 40.3163 6.8828 C 45.2382 6.8828 49.5505 10.3750 49.5505 17.0313 L 49.5505 22.4219 C 49.5505 24.0860 50.3708 24.7891 51.4489 24.7891 C 52.4804 24.7891 53.3243 24.1563 53.3243 22.4922 L 53.3243 17.5234 C 53.3243 7.8438 46.9259 3.2969 40.3163 3.2969 Z"/></svg>
           <button class="transition-colors hover:bg-[#b3b3b3]">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
               <g fill="#b3b3b3">
@@ -29,12 +29,12 @@
               </g>
             </svg>
           </button>
-          <img width="200px" class="ml-[40px]" src="assets/SippiCupPod Logo Dark NoBG.png" alt="SippiCup full logo"/> <!--class="hidden dark:block" -->
+          <img width="200px" class="flex items-center lg:ml-[40px]" src="assets/SippiCupPod Logo Dark NoBG.png" alt="SippiCup full logo"/> <!--class="hidden dark:block" -->
           <!-- <img class="dark:hidden" width="200px" class="ml-[40px]" src="assets/SippiCupPod Logo Light NoBG.png" alt="SippiCup full logo"/> -->
         </div>
         
         <!-- Search container -->
-        <div class="flex items-center w-[400px] h-12 px-3">
+        <div class="hidden md:block md:flex md:items-center md:w-[300px] lg:w-[400px] md:h-12 md:px-3">
             <svg class="mr-3" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#b3b3b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -47,14 +47,14 @@
         </div>
         
         <!-- Icons container -->
-        <div class="flex items-center gap-3 mr-[80px]">
-            <div class="rounded-full w-[40px] h-[40px] bg-[#65350F] grid place-items-center cursor-pointer hover:bg-[#9A7B4F] mr-3">
+        <div class="flex items-center gap-3 mr-3 lg:mr-[80px]">
+            <div class="hidden lg:block rounded-full w-[40px] h-[40px] bg-[#65350F] grid place-items-center cursor-pointer hover:bg-[#9A7B4F] p-1 mr-3">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="#b3b3b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="#b3b3b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
-            <div class="rounded-full w-[40px] h-[40px] bg-[#65350F] grid place-items-center cursor-pointer hover:bg-[#9A7B4F] mr-3">
+            <div class="hidden lg:block rounded-full w-[40px] h-[40px] bg-[#65350F] grid place-items-center cursor-pointer hover:bg-[#9A7B4F] p-1 mr-3">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="#b3b3b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z" stroke="#b3b3b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -71,10 +71,10 @@
     </header>
 
     <!-- Main Content Area -->
-    <main class="flex flex-1 relative overflow-x mt-[60px]">        
+    <main class="h-screen flex flex-1 flex-shrink-0 relative overflow-x mt-[60px]">        
 
         <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar absolute md:relative overflow-hidden h-full pt-6 w-[350px] bg-[#121212] flex-shrink-0 p-5 z-40 border-r border-[#333]">
+        <aside id="sidebar" class="hidden lg:block absolute lg:relative lg:h-full lg:h-fit pt-6 w-[350px] bg-[#121212] flex-shrink-0 p-5 z-40 border-r border-[#333]">
             <div class="w-full flex flex-col ">
                 <button class="flex items-center w-[315px] h-[55px] -mx-5 gap-3 cursor-pointer rounded-l rounded-full transition-colors hover:bg-[#65350F]">
                   <div class="flex items-center gap-3 ml-6">
@@ -247,7 +247,7 @@
         </aside>
 
         <!-- Content Area -->
-        <section class="flex flex-col bg-gradient-to-b from-[#1a1a1a] to-[#121212] p-12">
+        <section class="flex flex-col h-fit w-fit flex-1 flex-shrink-0 bg-gradient-to-b from-[#1a1a1a] to-[#121212] p-5 lg:p-12">
             <div class="flex items-center justify-start gap-3 mb-12">
               <h4 class="font-medium text-[#fff] text-[15px]">Filter by:</h4>
               <div class=" flex items-center relative">
@@ -276,7 +276,7 @@
             <div class="flex flex-col mb-4">
               <h1 class="text-2xl font-bold text-white mb-6">Playlist by Genre</h1>
               <div class="flex items-center mb-6">
-                <button class="p-4">
+                <button class="p-1 lg:p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
                         <g>
                             <path fill="#b3b3b3" d="M0 0h24v24H0z"/>
@@ -284,7 +284,7 @@
                         </g>
                     </svg>
                 </button>
-                <div id="podcasts-container" class="flex items-center gap-6 w-[900px] h-[370px] px-1 py-2 overflow-y-auto">
+                <div id="podcasts-container" class="flex items-center gap-6 w-[260px] md:w-[500px] lg:w-[900px] flex flex-1 flex-shrink-0 h-[370px] px-1 py-2 overflow-y-auto">
                   <!-- Music Cards -->
                   <div class="min-w-[280px] max-h-[350px] flex flex-col hover:bg-[#65350F] p-5 gap-1 rounded-lg bg-[#282828] transition-colors cursor-pointer">
                       <img src="assets/SippiCup_logo.png" alt="Album" class="rounded-md mb-4 w-[240px] h-[190px]">
@@ -451,7 +451,7 @@
                       <p class="text-sm text-[#b3b3b3] truncate">Updated x days ago</p>
                   </div>
                 </div>
-                <button class="p-4">
+                <button class="p-1 lg:p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
                         <g>
                             <path fill="#b3b3b3" d="M0 0h24v24H0z"/>
@@ -462,7 +462,7 @@
               </div>
               <h1 class="text-2xl font-bold text-white mb-6">Playlist by Recently Updated</h1>
               <div class="flex items-center mb-[100px]">
-                  <button class="p-4">
+                  <button class="p-1 lg:p-4">
                       <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
                           <g>
                               <path fill="#b3b3b3" d="M0 0h24v24H0z"/>
@@ -470,7 +470,7 @@
                           </g>
                       </svg>
                   </button>
-                  <div class="flex items-center gap-6 w-[900px] h-[370px] px-1 py-2 overflow-y-auto">
+                  <div class="flex items-center gap-6 w-[260px] md:w-[500px] lg:w-[900px] flex flex-1 flex-shrink-0 h-[370px] px-1 py-2 overflow-y-auto">
                     <!-- Music Cards -->
                     <div class="min-w-[280px] max-h-[350px] flex flex-col hover:bg-[#65350F] p-5 gap-1 rounded-lg bg-[#282828] transition-colors cursor-pointer">
                         <img src="assets/SippiCup_logo.png" alt="Album" class="rounded-md mb-4 w-[240px] h-[190px]">
@@ -678,7 +678,7 @@
                         <p class="text-sm text-[#b3b3b3] truncate">Updated x days ago</p>
                     </div>
                   </div>
-                  <button class="p-4">
+                  <button class="p-1 lg:p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
                         <g>
                             <path fill="#b3b3b3" d="M0 0h24v24H0z"/>
@@ -693,7 +693,7 @@
 
     <!-- The Podcast modal -->
     <div class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" id="podcast-modal">
-        <div class="bg-[#121212] rounded-lg p-6 mx-3 w-[900px] h-[615px] top-[242px] left-[456px] rounded-[6px] opacity-100 transform-none overflow-x-auto">
+        <div class="bg-[#121212] rounded-lg p-6 mx-4 w-[900px] h-[615px] top-[242px] left-[456px] rounded-[6px] opacity-100 transform-none overflow-x-auto">
             <div class="modal-actions flex justify-between items-center mb-4">
                 <h2 id="pod-title" class="text-3xl font-bold  text-[#fff] px-4">Podcast Title</h2>
                 <button type="button" class="py-2 text-3xl font-extrablack text-[#EA5555] hover:text-red-900" id="cancel-btn">
@@ -750,7 +750,7 @@
     </div>
 
     <!-- Player Controls -->
-    <footer class="bottom-0 left-0 right-0 w-full fixed bg-[#181818] h-25 flex flex-col items-center justify-between border-t border-[#333] p-4 text-[#b3b3b3] z-50">
+    <footer class="bottom-0 left-0 right-0 w-full fixed bg-[#181818] h-25 flex-1 flex-shrink-0 flex flex-col items-center justify-between border-t border-[#333] p-4 text-[#b3b3b3] z-50">
         <!-- Progress Bar -->
         <div class="flex items-center w-full mb-4">
             <span class="w-12 text-right" id="currentTime">0:00</span>
@@ -763,11 +763,11 @@
         </div>
         
         <!-- Controls -->
-        <div class="flex items-center justify-around w-full">
+        <div class="flex items-center justify-between md:justify-around w-full">
             <!-- Song Info -->
-            <div class="flex items-center justify-start w-[33%] mr-4">
-                <img src="assets/SippiCup_logo.png" alt="Album cover" class="rounded-md w-[50px] h-[50px] mr-4" />
-                <div class="flex flex-col justify-center items-start ">
+            <div class="flex items-center justify-start w-[20%] md:w-[33%] md:mr-4">
+                <img src="assets/SippiCup_logo.png" alt="Album cover" class="rounded-md w-[50px] h-[50px] md:mr-4" />
+                <div class="hidden md:block flex flex-col justify-center items-start ">
                     <span class="font-medium text-[#fff] text-[15px]">Podcast Title</span>
                     <span class="font-medium text-[#b3b3b3] text-[13px]">Season 1</span>
                     <span class="font-medium text-[#b3b3b3] text-[11px]">Episode 4</span>
@@ -775,8 +775,8 @@
             </div>
             
             <!-- Playback Controls -->
-            <div class="flex items-center justify-center w-[33%] space-x-2">
-                <button id="shuffleBtn" class="text-xl cursor-pointer text-[#b3b3b3] hover:text-white">
+            <div class="flex items-center justify-center w-[50%] md:w-[33%] md:space-x-2">
+                <button id="shuffleBtn" class="hidden md:block text-xl cursor-pointer text-[#b3b3b3] hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="22px" height="22px" viewBox="0 0 24 24" id="shuffle" data-name="Flat Line" class="icon flat-line"><path id="primary" d="M3,8H5.28a6,6,0,0,1,4.51,2.05L13.21,14A6,6,0,0,0,17.72,16H21" style="fill: none; stroke: #b3b3b3; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"/>
                       <polyline id="primary-2" data-name="primary" points="19 14 21 16 19 18" style="fill: none; stroke: #b3b3b3; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"/>
                       <path id="primary-3" data-name="primary" d="M21,8H17.72a6,6,0,0,0-4.51,2.05L9.79,14A6,6,0,0,1,5.28,16H3" style="fill: none; stroke: #b3b3b3; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"/>
@@ -807,7 +807,7 @@
                     </svg>
                 </button>
                 
-                <button class="text-2xl cursor-pointer text-[#b3b3b3] hover:text-white">
+                <button class="hidden md:block text-2xl cursor-pointer text-[#b3b3b3] hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="#b3b3b3">
                       <path d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89472 5.63604 5.63604C6.89472 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C21 14.387 20.0518 16.6761 18.364 18.364C16.6761 20.0518 14.387 21 12 21ZM12 4.5C10.5166 4.5 9.0666 4.93987 7.83323 5.76398C6.59986 6.58809 5.63856 7.75943 5.07091 9.12988C4.50325 10.5003 4.35473 12.0083 4.64411 13.4632C4.9335 14.918 5.64781 16.2544 6.6967 17.3033C7.7456 18.3522 9.08197 19.0665 10.5368 19.3559C11.9917 19.6453 13.4997 19.4968 14.8701 18.9291C16.2406 18.3614 17.4119 17.4001 18.236 16.1668C19.0601 14.9334 19.5 13.4834 19.5 12C19.5 10.0109 18.7098 8.10323 17.3033 6.6967C15.8968 5.29018 13.9891 4.5 12 4.5Z" fill="#b3b3b3"/>
                       <path d="M14.5 8H9.5C8.67157 8 8 8.67157 8 9.5V14.5C8 15.3284 8.67157 16 9.5 16H14.5C15.3284 16 16 15.3284 16 14.5V9.5C16 8.67157 15.3284 8 14.5 8Z" fill="#b3b3b3"/>
@@ -818,7 +818,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="22px" height="22px" viewBox="0 0 24 24" id="fast-forward" data-name="Flat Color" class="icon flat-color"><path id="primary" d="M21.55,11.17l-9-6a1,1,0,0,0-1,0A1,1,0,0,0,11,6v4.13l-7.45-5a1,1,0,0,0-1,0A1,1,0,0,0,2,6V18a1,1,0,0,0,.53.88,1,1,0,0,0,1-.05l7.45-5V18a1,1,0,0,0,.53.88,1,1,0,0,0,1-.05l9-6a1,1,0,0,0,0-1.66Z" style="fill: #b3b3b3"/></svg>
                 </button>
 
-                <button id="repeatBtn" class="text-xl cursor-pointer text-[#b3b3b3] hover:text-white">
+                <button id="repeatBtn" class="hidden md:block text-xl cursor-pointer text-[#b3b3b3] hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" viewBox="0 0 24 24" fill="none">
                       <path d="M17 2L21 6M21 6L17 10M21 6H7.8C6.11984 6 5.27976 6 4.63803 6.32698C4.07354 6.6146 3.6146 7.07354 3.32698 7.63803C3 8.27976 3 9.11984 3 10.8V11M3 18H16.2C17.8802 18 18.7202 18 19.362 17.673C19.9265 17.3854 20.3854 16.9265 20.673 16.362C21 15.7202 21 14.8802 21 13.2V13M3 18L7 22M3 18L7 14" stroke="#b3b3b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -826,8 +826,8 @@
             </div>
             
             <!-- Volume Controls -->
-            <div class="flex items-center justify-end w-[33%]">
-                <button class="text-xl cursor-pointer text-[#b3b3b3] hover:text-white mr-2">
+            <div class="flex items-center justify-end w-[20%] md:w-[33%]">
+                <button class="hidden md:block text-xl cursor-pointer text-[#b3b3b3] hover:text-white mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" width="24px" height="24px" viewBox="-1.5 0 19 19" class="cf-icon-svg"><path d="M7.676 4.938v9.63c0 .61-.353.756-.784.325l-2.896-2.896H2.02A1.111 1.111 0 0 1 .911 10.89V8.618a1.112 1.112 0 0 1 1.108-1.109h1.977l2.896-2.896c.43-.43.784-.284.784.325zm7.251 6.888a.554.554 0 1 1-.784.784l-2.072-2.073-2.073 2.073a.554.554 0 1 1-.784-.784l2.073-2.073L9.214 7.68a.554.554 0 0 1 .784-.783L12.07 8.97l2.072-2.073a.554.554 0 0 1 .784.783l-2.072 2.073z"/></svg>
                 </button>
                 <input 
@@ -838,7 +838,7 @@
                     id="volumeControl"
                     class="w-24 mr-2"
                 />
-                <button class="text-xl cursor-pointer text-[#b3b3b3] hover:text-white">
+                <button class="hidden md:block text-xl cursor-pointer text-[#b3b3b3] hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b3b3b3" height="20px" width="20px" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
                       <g>
                         <g>
@@ -867,7 +867,7 @@
                       </g>
                     </svg>
                 </button>
-                <span class="text-sm ml-2 w-8" id="volumeValue">80%</span>
+                <span class="hidden md:block text-sm ml-2 w-8" id="volumeValue">80%</span>
             </div>
         </div>
     </footer>

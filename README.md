@@ -75,3 +75,25 @@ Your app should showcase clean code architecture and strong UI/UX design while f
 
 A fully functional **dynamic Podcast app** where Poscast shows appear correctly, and users can **open a modal to view** Podcast details. The project will follow **clean, well-documented, and maintainable code practices**, ensuring a professional and scalable implementation.
 
+
+## To-Do list
+1. Open / Close Sidebar menu (All views)
+2. Create Different Pages for all of the listed items in the menu
+  - Home Page: 
+    - Filter by: Genre (Alphabetical order: A-Z)
+    - Filter by: Recently Updated (Most recent: Ascending, Olde: Descending order)
+  - Library Page: Everything that is there.
+  - Popular Page:
+    - Filter by: Most Popular (Count of likes)
+    - Filter by: Most Popular Genre
+  - Genre Page:
+    - Filter by: Genre (Alphabetical order: A-Z)
+  - Recently Added page:
+    - Show Recently added per Week?
+    - Show Recently added per Month?
+  - Recommended Page:
+    - Show Recommended shows
+3. Resume Podcast menu (later stage - Do figure it out)
+4. Close Sidebar menu functionality
+5. Light-mode / Dark-mode toggle functionality
+6. Player Functionality
